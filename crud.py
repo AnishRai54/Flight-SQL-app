@@ -4,7 +4,7 @@ import mysql.connector
 password=os.getenv("DB_Password")
 try:
     conn = mysql.connector.connect(
-        host='127.0.0.1',
+        host='localhost',
         user='root',
         password=password,
         port=3306,
@@ -45,4 +45,6 @@ conn.commit()
 mycursor.execute("select * from airline ")
 data=mycursor.fetchall()
 print(data)
+
+
 
